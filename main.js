@@ -1,4 +1,4 @@
-const add = (x, y) => { return x + y }
+const add = (x, y,z) => { return x * y * z }
 
 const validate = async (event) => {
   console.log(`triggered validate on ${event.target.id}`)
@@ -18,6 +18,7 @@ const updateWithAdd = async (event) => {
     const s = document.querySelector('#guest').value.replace(regex, '')
     const i = parseInt(document.querySelector('#firstNumber').value)
     const j = parseInt(document.querySelector('#secondNumber').value)
+    const k = parseInt(document.querySelector('#thirdNumber').value)
     const ans = `${s}, your sum is ${add(i, j)}.`
     document.querySelector('#result').innerHTML = ans
   }
@@ -37,7 +38,8 @@ const updateWithJoke = async (event) => {
 
 document.addEventListener('focusout', event => {
   if ((event.target && event.target.id === 'firstNumber') ||
-    (event.target && event.target.id === 'secondNumber')) {
+    (event.target && event.target.id === 'secondNumber')||
+    (event.target && event.target.id === 'thirdNumber')) {
     validate(event)
   }
 })
