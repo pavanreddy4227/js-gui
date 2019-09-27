@@ -18,7 +18,7 @@ const updateWithAdd = async (event) => {
     const i = parseInt(document.querySelector('#firstNumber').value)
     const j = parseInt(document.querySelector('#secondNumber').value)
     const k = parseInt(document.querySelector('#thirdNumber').value)
-    const ans = `${s}, your volume is ${add(i, j, k)}.`
+    const ans = `${s}, your volume is ${add(i, j, k)}.
     document.querySelector('#result').innerHTML = ans
   }
 }
