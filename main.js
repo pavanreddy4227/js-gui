@@ -15,11 +15,10 @@ const updateWithAdd = async (event) => {
   document.querySelector('#result').innerHTML = ''
   if (document.querySelector('#firstNumber').checkValidity() && document.querySelector('#secondNumber').checkValidity()) {
     const regex = /[^a-zA-Z_]/g
-    const s = document.querySelector('#guest').value.replace(regex, '')
     const i = parseInt(document.querySelector('#firstNumber').value)
     const j = parseInt(document.querySelector('#secondNumber').value)
     const k = parseInt(document.querySelector('#thirdNumber').value)
-    const ans = `${s}, your sum is ${add(i, j, k)}.`
+    const ans = `${s}, your volume is ${add(i, j, k)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
